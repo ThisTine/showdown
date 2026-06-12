@@ -4,6 +4,15 @@ Real-time scrum poker for your team. Create a room, share the link, everyone vot
 
 **Live demo → [showdown.thistine.com](https://showdown.thistine.com)**
 
+<img width="1483" height="914" alt="image" src="https://github.com/user-attachments/assets/cd15f953-d249-4e84-9485-16e0d258c244" />
+
+| | | | |
+| --- | --- | --- | --- |
+| <img width="1483" height="883" alt="image" src="https://github.com/user-attachments/assets/38ce3a50-af24-4256-a256-3570ba5cd815" /> | <img width="1473" height="872" alt="image" src="https://github.com/user-attachments/assets/d895140f-8208-4458-b625-53a122a99c26" /> | <img width="1484" height="921" alt="image" src="https://github.com/user-attachments/assets/446eb50b-94e7-4598-9ccc-4beab7bdaaa1" /> | <img width="1484" height="924" alt="image" src="https://github.com/user-attachments/assets/7c0c9f41-d788-490f-8cc7-4fba9a5916dd" /> |
+
+
+
+
 ---
 
 ## Features
