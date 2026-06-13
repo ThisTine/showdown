@@ -1,0 +1,30 @@
+name: Auto Build and Deploy
+
+on:
+  push:
+    tags:
+      - 'v*' 
+
+permissions:
+  contents: read
+  actions: read
+  packages: write
+
+jobs:
+  trigger-internal-build:
+    uses: infras/workflow-templates/.gitea/workflows/docker-template.yml@e8bfdf9d64bf061e76b948fda0141ef88d04b2e0
+    with:
+      image_name: 'showdown'
+      image_tag: ${{ gitea.ref_name }}
+    secrets:
+      REGISTRY_USER: ${{ secrets.REGISTRY_USER }}
+      REGISTRY_TOKEN: ${{ secrets.REGISTRY_TOKEN }} 
+
+  bump-compose:
+    needs: trigger-internal-build
+    uses: infras/workflow-templates/.gitea/workflows/bump-compose-version.yml@e8bfdf9d64bf061e76b948fda0141ef88d04b2e0
+    with:
+      app: showdown
+      version: ${{ gitea.ref_name }}
+    secrets:
+      COMPOSE_TOKEN: ${{ secrets.COMPOSE_TOKEN }}
